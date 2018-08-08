@@ -6,6 +6,7 @@ class MP3Importer
   end
   
   def files
+<<<<<<< HEAD
     files_list = Dir.entries(@path)
     files = []
     files_list.each do |file|
@@ -19,6 +20,14 @@ class MP3Importer
   def import
     files.each do |file|
       Song.new_by_filename(file)
+=======
+    
+  end
+  
+  def import(files_list)
+    files_list.each do |file|
+      Song.new_by_filename(filename)
+>>>>>>> a81973dac269cd27fdb8d664ae3552565bd8e31a
     end
   end
   
